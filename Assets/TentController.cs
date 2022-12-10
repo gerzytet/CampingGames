@@ -1,13 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
-public class TentController : MonoBehaviour
+public class TentController : MinigameController
 {
     public GameObject drop;
-
     public GameObject leak;
+    public TentController instance;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -31,5 +34,23 @@ public class TentController : MonoBehaviour
         }
         var leak = leaks[Random.Range(0, leaks.Length)];
         Instantiate(drop, leak.transform.position, leak.transform.rotation);
+    }
+
+    public override bool IsWon()
+    {
+        return FindObjectsOfType<Leak>().Length == 0;
+    }
+
+    public override bool IsLost()
+    {
+        return false;
+    }
+
+    private void OnDestroy()
+    {
+        foreach (Tape tape in FindObjectsOfType<Tape>())
+        {
+            Destroy(tape.gameObject);
+        }
     }
 }
