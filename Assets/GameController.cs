@@ -11,19 +11,32 @@ public class GameController : MonoBehaviour
     public Canvas UICanvas;
 
     private string currentlyLoaded = null;
+    public bool gameOver = false;
 
-    void LoadRandom()
+    public static GameController instance;
+
+    GameController()
+    {
+        instance = this;
+    }
+
+    void Load(string game)
     {
         if (currentlyLoaded != null)
         {
             SceneManager.UnloadScene(currentlyLoaded);
         }
-
-        string game = games[Random.Range(0, games.Count)];
+        
         currentlyLoaded = game;
         SceneManager.LoadScene(game, LoadSceneMode.Additive);
         UICanvas.worldCamera = Camera.main;
         TimeBar.instance.ResetTime();
+    }
+
+    void LoadRandom()
+    {
+        string game = games[Random.Range(0, games.Count)];
+        Load(game);
     }
     
     void Start()
@@ -33,6 +46,10 @@ public class GameController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (gameOver)
+        {
+            return;
+        }
         var minigame = FindObjectOfType<MinigameController>();
         if (minigame == null)
         {
@@ -52,6 +69,12 @@ public class GameController : MonoBehaviour
         {
             Lives.instance.lives--;
             LoadRandom();
+        }
+
+        if (Lives.instance.lives <= 0)
+        {
+            gameOver = true;
+            Load("Game Over");
         }
     }
 }

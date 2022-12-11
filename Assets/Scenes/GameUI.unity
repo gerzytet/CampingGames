@@ -391,8 +391,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Time
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 242af0fde535977408272dd899f94155, type: 2}
+  m_sharedMaterial: {fileID: -7954453222169750682, guid: 242af0fde535977408272dd899f94155, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -595,8 +595,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 242af0fde535977408272dd899f94155, type: 2}
+  m_sharedMaterial: {fileID: -7954453222169750682, guid: 242af0fde535977408272dd899f94155, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -682,7 +682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25b7d5a4464b422b88430674655acd8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives: 0
+  lives: 3
 --- !u!1 &1680916265
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,7 +715,9 @@ MonoBehaviour:
   games:
   - Tent
   - Fishing
+  - Ropes
   UICanvas: {fileID: 19949040}
+  gameOver: 0
 --- !u!4 &1680916267
 Transform:
   m_ObjectHideFlags: 0
@@ -792,8 +794,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 242af0fde535977408272dd899f94155, type: 2}
+  m_sharedMaterial: {fileID: -7954453222169750682, guid: 242af0fde535977408272dd899f94155, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

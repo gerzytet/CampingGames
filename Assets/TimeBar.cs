@@ -39,6 +39,7 @@ public class TimeBar : MonoBehaviour
         float newSize = Mathf.Lerp(0, originalSize, timePercent);
         transform.position = new Vector3(newX, transform.position.y, transform.position.z);
         ((RectTransform) transform).sizeDelta = new Vector2(newSize, ((RectTransform) transform).rect.height);
+        gameObject.SetActive(!GameController.instance.gameOver);
         //transform.localScale = new Vector3(newSize, transform.localScale.y, transform.localScale.z);
     }
 }
