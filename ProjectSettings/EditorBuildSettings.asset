@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tent.unity
     guid: e3d1f20e95c04054fa8b5c6bcab5bd98
+  - enabled: 1
+    path: Assets/Scenes/Fishing.unity
+    guid: 8ea8a15a9668d0f4f99cc0343248c186
   m_configObjects: {}

@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - fish
   - 
   - 
   - 
@@ -40,4 +40,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: fish
+    uniqueID: 1799668801
+    locked: 0
+  - name: hook
+    uniqueID: 2282588693
+    locked: 0
+  - name: water
+    uniqueID: 278297051
+    locked: 0
+  - name: ui
+    uniqueID: 1958617335
     locked: 0

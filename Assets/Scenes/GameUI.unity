@@ -714,6 +714,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   games:
   - Tent
+  - Fishing
   UICanvas: {fileID: 19949040}
 --- !u!4 &1680916267
 Transform:

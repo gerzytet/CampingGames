@@ -19,7 +19,8 @@ public class TentController : MinigameController
             var point = new Vector2(Random.Range(-5f, 5f), Random.Range(-5f, 5f));
             for (int j = 0; j < 6; j++)
             {
-                Instantiate(leak, point + new Vector2(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f)), Quaternion.identity);
+                GameObject newLeak = Instantiate(leak, point + new Vector2(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f)), Quaternion.identity);
+                newLeak.transform.parent = transform.parent;
             }
         }
     }
@@ -33,7 +34,8 @@ public class TentController : MinigameController
             return;
         }
         var leak = leaks[Random.Range(0, leaks.Length)];
-        Instantiate(drop, leak.transform.position, leak.transform.rotation);
+        GameObject drop = Instantiate(this.drop, leak.transform.position, leak.transform.rotation);
+        drop.transform.SetParent(transform.parent);
     }
 
     public override bool IsWon()

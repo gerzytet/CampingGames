@@ -43,7 +43,7 @@ public class Tape : MonoBehaviour
                 start = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             } else if (Input.GetMouseButtonUp(0))
             {
-                GameObject newTape = Instantiate(gameObject);
+                GameObject newTape = Instantiate(gameObject, transform.parent, true);
                 Tape tape = newTape.GetComponent<Tape>();
                 tape.isPreview = false;
                 tape.SetVisible(true);
