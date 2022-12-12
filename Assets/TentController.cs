@@ -16,7 +16,7 @@ public class TentController : MinigameController
     {
         for (int i = 0; i < 3; i++)
         {
-            var point = new Vector2(Random.Range(-5f, 5f), Random.Range(-5f, 5f));
+            var point = new Vector2(Random.Range(-4f, 4f), Random.Range(-4f, 4f));
             for (int j = 0; j < 6; j++)
             {
                 GameObject newLeak = Instantiate(leak, point + new Vector2(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f)), Quaternion.identity);

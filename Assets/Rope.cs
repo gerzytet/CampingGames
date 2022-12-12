@@ -18,7 +18,7 @@ public class Rope : MonoBehaviour
         }
         transform.position = Vector2.Lerp(start, end, 0.5f);
         Vector2 diff = end - start;
-        transform.localScale = new Vector2(diff.magnitude, 1);
+        //transform.localScale = new Vector2(diff.magnitude, 1);
         transform.rotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.right, diff));
         end = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
@@ -35,5 +35,8 @@ public class Rope : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        
+        GetComponent<SpriteRenderer>().color = RopeController.instance.ropeColors[type];
+        GetComponent<SpriteRenderer>().size = new Vector2(0.8f * diff.magnitude, 0.8f);
     }
 }
